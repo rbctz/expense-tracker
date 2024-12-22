@@ -1,0 +1,198 @@
+/* Global Styling */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #e3f2fd, #bbdefb);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* App Container */
+#app {
+    background: #ffffff;
+    max-width: 450px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Heading */
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #007BFF;
+}
+
+/* Input Section */
+.input-section {
+    display: grid;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.input-section input, .input-section select, .input-section button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-section input:focus, .input-section select:focus {
+    border-color: #007BFF;
+    background: #f1faff;
+}
+
+.input-section button {
+    background: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.input-section button:hover {
+    background: #0056b3;
+    transform: translateY(-1px);
+}
+
+/* Summary Section */
+.summary {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.summary h2 {
+    font-size: 1.6rem;
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+#expense-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#expense-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.1), rgba(255, 255, 255, 0.5));
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+}
+
+#expense-list li:hover {
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.2), rgba(255, 255, 255, 0.7));
+    transform: translateY(-1px);
+}
+
+#expense-list .category {
+    font-weight: bold;
+    color: #007BFF;
+}
+
+#expense-list button {
+    background: #f44336;
+    color: white;
+    border: none;
+    padding: 7px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+#expense-list button:hover {
+    background: #d32f2f;
+    transform: translateY(-1px);
+}
+
+#expense-list .expense-name {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+#expense-list .amount {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #333;
+    margin-left: 10px;
+}
+
+#expense-list .amount span {
+    color: #28a745; /* Green for positive values */
+}
+
+/* Filter Section */
+.filter-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.filter-section select, .filter-section button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-section select:focus, .filter-section button:focus {
+    border-color: #007BFF;
+}
+
+.filter-section button {
+    background: #007BFF;
+    color: white;
+}
+
+.filter-section button:hover {
+    background: #0056b3;
+    transform: translateY(-1px);
+}
+
+/* Total Section */
+.total {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 8px;
+    background: #e3f2fd;
+    border: 2px solid #bbdefb;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
